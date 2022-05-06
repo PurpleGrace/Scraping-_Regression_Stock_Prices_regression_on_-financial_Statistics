@@ -31,5 +31,15 @@ The R-squared and Adj. R-sqaured are both terrifically high, it is caused by fea
 #### 2. Linear regression without historical price related feature.
 Generally speaking, the financial numbers of a public company explains 56.5% of its stock price.
 
-### 3. Regression with Regulations:
-Among all the models I have trained with cross validation, including  Lasso, Ridge and ElasticNet, ElasticNet performed best with best mean $R^2$ 
+#### 3. Regression with Regulations:
+Among all the models I have trained with cross validation, including  Lasso, Ridge and ElasticNet, ElasticNet performed best with best mean R^2 of 0.531.
+
+##### Insight:
+- 'Revenue Per Share (ttm)', 'Diluted EPS (ttm)', '52-Week Change 3', '% Held by Institutions 1', 'Profit Margin', 'Payout Ratio 4', 'Return on Assets (ttm)', 'Return on Equity (ttm)''Total Debt (mrq)’ have a Positive relationship with stock price. For example: For every dollar increase in Diluted EPS, the stock price will increase e^(0.229) = 1.26 times
+- ‘Avg Vol (10 day) 3', 'Shares Short (prior month Aug 13, 2021) 4’ have negative relationship with stock price. For example, for every share Short by investors, the stock price decrease by (1-np.e**-0.049132) = 4%
+
+#### 4. What if feed all non-price-related features to ElasticNet model
+The mean score increased slightly, but our model will become much more complex.
+
+#### 5. linear regression with dummy variables “Industry"
+The R squared value will increase to 0.601, but model will become more complex.
