@@ -32,7 +32,7 @@ The R-squared and Adj. R-sqaured are both terrifically high, it is caused by fea
 Generally speaking, the financial numbers of a public company explains 56.5% of its stock price.
 
 #### 3. Regression with Regulations:
-Among all the models I have trained with cross validation, including  Lasso, Ridge and ElasticNet, ElasticNet performed best with best mean R^2 of 0.531.
+Among all the models I have trained with cross validation, including  Lasso, Ridge and ElasticNet, ElasticNet performed best with best mean **R<sup>2</sup>** of 0.531.
 
 ##### Insight:
 - 'Revenue Per Share (ttm)', 'Diluted EPS (ttm)', '52-Week Change 3', '% Held by Institutions 1', 'Profit Margin', 'Payout Ratio 4', 'Return on Assets (ttm)', 'Return on Equity (ttm)''Total Debt (mrq)’ have a Positive relationship with stock price. For example: For every dollar increase in Diluted EPS, the stock price will increase e^(0.229) = 1.26 times
